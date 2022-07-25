@@ -9,7 +9,7 @@ a.getprofessional()
 
 let professional1 = [a, b, c, d]
 
-let Movie1= new Movie ("Encanto", 2, professional1, professional1);
+let Movie1= new Movie ("Encanto", 2, "española", "terror");
 
 console.log(Movie1.printAll());
 
