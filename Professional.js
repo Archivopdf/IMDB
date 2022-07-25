@@ -23,6 +23,15 @@ var Professional = /** @class */ (function () {
             " Oscars Numbers - " + this.oscarsNumber + " Profession - " + this.profession);
         // console.log(JSON.stringify(Professional));
     };
+    Professional.prototype.getActors = function (profesional) {
+        var actores = new Array();
+        for (var i = 0; i < profesional.length; i++) {
+            if (profesional[i].profession == "actor") {
+                actores.push(profesional[i]);
+            }
+        }
+        return actores;
+    };
     return Professional;
 }());
 exports.Professional = Professional;
@@ -31,3 +40,5 @@ var b = new Professional("pedro", 19, "accion", 55, 169, "castaño", "verdes", "
 var c = new Professional("maria", 55, "sci-fi", 88, 192, "rubio", "marron", ".", true, "americano", 2, "director");
 var d = new Professional("rebeca", 33, "accion", 59, 175, "rubio", "azul", ".", false, "mejicana", 0, "actor");
 a.getprofessional();
+var actors = [a, b, c, d];
+console.log(a.getActors(actors));
