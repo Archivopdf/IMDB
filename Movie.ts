@@ -13,9 +13,9 @@ class Movie {
     public mainCharacterName: string;
     public producer: Professional[];
     public distributor: string;
-    public genre: string;
+    public genre: Professional [];
 
-    constructor (title:string, releaseYear:number, nacionality: Professional[], genre:string)
+    constructor (title:string, releaseYear:number, nacionality: Professional[], genre:Professional[])
     {
         this.title = title;
         this.releaseYear = releaseYear;
@@ -32,3 +32,5 @@ class Movie {
    
 
 }
+
+export {Movie}

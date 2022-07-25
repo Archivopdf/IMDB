@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.Movie = void 0;
 var Movie = /** @class */ (function () {
     function Movie(title, releaseYear, nacionality, genre) {
         this.title = title;
@@ -12,3 +13,4 @@ var Movie = /** @class */ (function () {
     };
     return Movie;
 }());
+exports.Movie = Movie;
