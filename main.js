@@ -8,5 +8,5 @@ var c = new Professional_1.Professional("maria", 55, "sci-fi", 88, 192, "rubio",
 var d = new Professional_1.Professional("rebeca", 33, "accion", 59, 175, "rubio", "azul", ".", false, "mejicana", 0, "actor");
 a.getprofessional();
 var professional1 = [a, b, c, d];
-var Movie1 = new Movie_1.Movie("Encanto", 2, professional1, professional1);
+var Movie1 = new Movie_1.Movie("Encanto", 2, "española", "terror");
 console.log(Movie1.printAll());
