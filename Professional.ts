@@ -40,7 +40,15 @@ export class Professional {
         // console.log(JSON.stringify(Professional));
     }
 
-
+    public getActors(profesional: Professional[]): Professional[] {
+        let actores = new Array()
+        for (let i = 0; i < profesional.length; i++) {
+            if (profesional[i].profession == "actor") {
+                actores.push(profesional[i]);
+            }
+        }
+        return actores
+    }
 }
 
 let a = new Professional("juan", 33, "terror", 89, 190, "azul", "verdes", ".", false, "japones", 1, "actor");
@@ -48,3 +56,7 @@ let b = new Professional("pedro", 19, "accion", 55, 169, "castaño", "verdes", "
 let c = new Professional("maria", 55, "sci-fi", 88, 192, "rubio", "marron", ".", true, "americano", 2, "director");
 let d = new Professional("rebeca", 33, "accion", 59, 175, "rubio", "azul", ".", false, "mejicana", 0, "actor")
 a.getprofessional()
+
+let actors = [a, b, c, d];
+
+console.log(a.getActors(actors))
