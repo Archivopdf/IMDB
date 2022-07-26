@@ -16,21 +16,12 @@ var Professional = /** @class */ (function () {
         this.oscarsNumber = oscarNumber;
         this.profession = profession;
     }
-    Professional.prototype.getprofessional = function () {
+    Professional.prototype.getProfessional = function () {
         console.log("Name - " + this.name + " Age - " + this.age + " Genre - " + this.genre + " Weight - " + this.weight +
             " Height - " + this.height + " Hair Color - " + this.hairColor + " Eye Color - " + this.eyeColor +
             " Race - " + this.race + " Is Retired - " + this.isRetired + " Nationality - " + this.nationality +
             " Oscars Numbers - " + this.oscarsNumber + " Profession - " + this.profession);
         // console.log(JSON.stringify(Professional));
-    };
-    Professional.prototype.getActors = function (profesional) {
-        var actores = new Array();
-        for (var i = 0; i < profesional.length; i++) {
-            if (profesional[i].profession == "actor") {
-                actores.push(profesional[i]);
-            }
-        }
-        return actores;
     };
     return Professional;
 }());
@@ -39,6 +30,6 @@ var a = new Professional("juan", 33, "terror", 89, 190, "azul", "verdes", ".", f
 var b = new Professional("pedro", 19, "accion", 55, 169, "castaño", "verdes", ".", false, "aleman", 0, "actor");
 var c = new Professional("maria", 55, "sci-fi", 88, 192, "rubio", "marron", ".", true, "americano", 2, "director");
 var d = new Professional("rebeca", 33, "accion", 59, 175, "rubio", "azul", ".", false, "mejicana", 0, "actor");
-a.getprofessional();
+a.getProfessional();
 var actors = [a, b, c, d];
-console.log(a.getActors(actors));
+console.log(JSON.stringify(a));
