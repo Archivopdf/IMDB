@@ -1,17 +1,17 @@
 
-// import {Professional} from "./professional";
-// import {Movie} from "./movie";
+import { Professional } from "./professional";
+import { Movie } from "./movie";
 
 class Imdb {
 
-    public peliculas: Movie[];
+  public peliculas: Movie[];
 
-    constructor(peliculas: Movie[]){
+  constructor(peliculas: Movie[]) {
 
-        this.peliculas = peliculas
+    this.peliculas = peliculas
 
-    }
-      public toString() {
+  }
+  public toString() {
     let salida: string = "";
 
     for (let i = 0; i < this.peliculas.length; i++) {
@@ -19,10 +19,12 @@ class Imdb {
     }
 
     return salida;
-    
-    }};
 
-    export {Imdb};
+  }
+};
+
+export { Imdb };
+
 
     // let movie1 = new Movie();
     // let moive2 = new Movie();
