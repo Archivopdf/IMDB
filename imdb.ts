@@ -1,35 +1,22 @@
-
-import { Professional } from "./professional";
-import { Movie } from "./movie";
+import { Movie } from "./Movie";
+import * as fs from "fs";
 
 class Imdb {
-
+  public static DB_NAME = "imdbDDBB.json";
   public peliculas: Movie[];
 
   constructor(peliculas: Movie[]) {
-
-    this.peliculas = peliculas
-
+    this.peliculas = peliculas;
   }
-  public toString() {
-    let salida: string = "";
 
-    for (let i = 0; i < this.peliculas.length; i++) {
-      salida += this.peliculas[i].toString + "\n";
-    }
-
-    return salida;
-
+  public static escribirEnFicheroJSON(nombreFichero: string, obj: Imdb): void {
+    fs.writeFileSync(nombreFichero, JSON.stringify(obj));
+    console.log("registro añadido");
   }
-};
 
-export { Imdb };
+  public static obtenerInstanciaIMDB(nombreFichero: string): Imdb {
+    return JSON.parse(fs.readFileSync(nombreFichero).toString());
+  }
+}
 
-
-    // let movie1 = new Movie();
-    // let moive2 = new Movie();
-    // let movie3 = new Movie();
-
-    // let estrenos = [movie1, movie2, movie3];
-    // let cartelera = new Imdb (estrenos);
-    // console.log(cartelera);
+export { Imdb }
